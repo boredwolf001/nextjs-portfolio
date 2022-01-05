@@ -1,0 +1,30 @@
+.heroHeading {
+  color: var(--dark-color);
+  font-size: 60px;
+  line-height: 1;
+  margin-bottom: 30px !important;
+  font-weight: normal;
+
+  span {
+    font-weight: bold;
+    color: var(--light-green-color);
+  }
+}
+
+.flexCol1 {
+  max-width: 600px;
+}
+
+.flexCol2 {
+  max-width: 450px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.para {
+  color: var(--dark-color);
+  margin-bottom: 30px;
+  max-width: 500px;
+}

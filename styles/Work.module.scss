@@ -1,0 +1,13 @@
+.col1 {
+  max-width: 600px;
+}
+
+.col2 {
+  max-width: 400px;
+
+  svg {
+    width: 100%;
+    filter: saturate(1);
+    transform: translateX(200px) translateY(-100px);
+  }
+}

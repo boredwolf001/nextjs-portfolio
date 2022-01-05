@@ -1,0 +1,26 @@
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gridItem {
+  width: 150px;
+  aspect-ratio: 1;
+  background-color: rgb(246, 246, 246);
+  padding: 10px;
+  margin: 10px 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  filter: grayscale(1) blur(2px);
+  cursor: pointer;
+  transition: 0.5s linear;
+
+  &:hover {
+    filter: grayscale(0) blur(0);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
