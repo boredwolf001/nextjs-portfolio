@@ -9,7 +9,7 @@ const Footer: NextPage = () => {
     <div className={styles.footerWrapper}>
       <Flex>
         <div className={styles.col1}>
-          <h2 className={styles.heading}>Any Collaborators? Let's have a chat.</h2>
+          <h2 className={styles.heading}>Any Collaborators? Let&quot;s have a chat.</h2>
           <p>
             I am always up for cool ideas and projects. If you want have a chat about any of the projects I worked on, or have an interesting project, feel free to get in touch!
           </p>
