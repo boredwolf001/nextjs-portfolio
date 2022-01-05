@@ -1,3 +1,5 @@
+@import 'colors';
+
 .grid {
   margin-top: 20px;
   display: grid;
@@ -22,5 +24,19 @@
   &:hover {
     filter: grayscale(0) blur(0);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gridItem {
+    width: 100px;
+
+    img {
+      width: 90%;
+    }
   }
 }

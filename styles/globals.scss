@@ -1,17 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root {
-  --dark-color: #2a2b2a;
-  --light-green-color: rgba(139, 196, 95, 0.9);
-  --dark-green-color: rgba(93, 161, 69, 0.9);
-  --pink-color: #ec4899;
-  --light-blue-color: #5274ab;
-  --dark-blue-color: #4a7ac8;
-  --light-gray-color: #f3f4f6;
-}
+@import 'colors';
 
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -28,7 +20,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--dark-color);
+  color: $dark-gray;
   cursor: pointer;
 
   &:hover {
@@ -37,21 +29,17 @@ a {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1160px;
   margin: auto;
 }
 
-.kw-border-error {
-  border: none !important;
-  outline: none !important;
-  border: none;
-  border-bottom: 2px solid red !important;
-  margin-top: 10px;
-  width: 300px;
-  display: block;
-  outline: none;
-  background-color: transaprent;
-  font-family: inherit;
-  font-size: inherit;
-  text-align: left;
+.btn-link {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: $responsive-breakpoint) {
+  .container {
+    padding: 1rem;
+  }
 }

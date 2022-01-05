@@ -1,0 +1,35 @@
+@import 'colors';
+
+.flexCol1 {
+  max-width: 375px;
+  margin-right: 60px;
+
+  img {
+    border-radius: 15px;
+    width: 100%;
+  }
+}
+
+.flexCol2 {
+  width: 60%;
+
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  p {
+    max-width: 500px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: $responsive-breakpoint) {
+  .flexCol2 {
+    width: 100%;
+
+    p {
+      max-width: 400;
+    }
+  }
+}

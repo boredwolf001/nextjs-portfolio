@@ -1,3 +1,5 @@
+@import 'colors';
+
 .col1 {
   max-width: 600px;
 }
@@ -9,5 +11,21 @@
     width: 100%;
     filter: saturate(1);
     transform: translateX(200px) translateY(-100px);
+  }
+}
+
+.wrapper {
+  height: 500px;
+}
+
+@media (max-width: $responsive-breakpoint) {
+  .col2 {
+    svg {
+      display: none;
+    }
+  }
+
+  .wrapper {
+    height: 300px;
   }
 }

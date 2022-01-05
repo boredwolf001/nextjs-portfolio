@@ -1,7 +1,9 @@
+@import 'colors';
+
 .footerWrapper {
   width: 1000vw;
   padding: 1rem 5rem;
-  background-color: var(--light-gray-color);
+  background-color: $light-gray;
 }
 
 .flex {
@@ -26,4 +28,14 @@
 .copyright {
   margin-top: 50px;
   margin-bottom: 30px;
+}
+
+@media (max-width: $responsive-breakpoint) {
+  .footerWrapper {
+    padding: 1rem;
+  }
+
+  .col1 {
+    max-width: 450px;
+  }
 }

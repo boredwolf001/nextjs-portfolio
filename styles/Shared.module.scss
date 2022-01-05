@@ -1,3 +1,5 @@
+@import 'colors';
+
 .flex {
   display: flex;
   width: 100%;
@@ -20,18 +22,18 @@
 }
 
 .btnPrimary {
-  background-color: var(--light-blue-color);
+  background-color: $light-blue;
 
   &:hover {
-    background-color: var(--dark-blue-color);
+    background-color: $dark-blue;
   }
 }
 
 .btnSecondary {
-  background-color: var(--light-green-color);
+  background-color: $light-green;
 
   &:hover {
-    background-color: var(--dark-green-color);
+    background-color: $dark-green;
   }
 }
 
@@ -40,12 +42,19 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+
 .heading::before {
-  background-color: var(--dark-green-color);
+  background-color: $dark-green;
   border-radius: 0.25rem;
   content: '';
   display: block;
   height: 5px;
   width: 50px;
   margin-bottom: 10px;
+}
+
+@media (max-width: $responsive-breakpoint) {
+  .flex {
+    flex-direction: column;
+  }
 }

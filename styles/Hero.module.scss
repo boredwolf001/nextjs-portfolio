@@ -1,5 +1,7 @@
+@import 'colors';
+
 .heroHeading {
-  color: var(--dark-color);
+  color: $dark-gray;
   font-size: 60px;
   line-height: 1;
   margin-bottom: 30px !important;
@@ -7,7 +9,7 @@
 
   span {
     font-weight: bold;
-    color: var(--light-green-color);
+    color: $light-green;
   }
 }
 
@@ -24,7 +26,24 @@
 }
 
 .para {
-  color: var(--dark-color);
+  color: $dark-gray;
   margin-bottom: 30px;
   max-width: 500px;
+}
+
+@media (max-width: $responsive-breakpoint) {
+  .flexCol1 {
+    margin-bottom: 50px;
+    max-width: 450px;
+  }
+
+  .flexCol2 {
+    img {
+      width: 95%;
+    }
+  }
+
+  .heroHeading {
+    font-size: 40px;
+  }
 }
