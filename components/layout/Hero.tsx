@@ -13,7 +13,7 @@ const Hero: NextPage = () => {
               Modern and <span>Reliable</span> Web Apps
             </h1>
             <p className={styles.para}>
-              I'm a full stack developer from Sri Lanka. I love coding and experimenting with new technologies and solutions.
+              I&quot;m a full stack developer from Sri Lanka. I love coding and experimenting with new technologies and solutions.
             </p>
 
             <Button variant="primary"><span>Work</span> <BiChevronRight fontSize={30} /></Button>
