@@ -27,8 +27,8 @@ const Skills: NextPage = () => {
         <SectionHeading heading="Skills" />
 
         <div className={styles.grid}>
-          {images.map(img => (
-            <div className={styles.gridItem}>
+          {images.map((img, idx) => (
+            <div key={idx} className={styles.gridItem}>
               <img src={img} alt="Skill" />
             </div>
           ))}

@@ -16,10 +16,10 @@ const Footer: NextPage = () => {
 
           <p className={styles.copyright}><strong>Copright <BiCopyright /> {new Date().getFullYear()} - Maneth</strong></p>
 
-          <a href="https://github.com/manethyethmin" target="_blank">
+          <a href="https://github.com/manethyethmin" rel="noreferrer" target="_blank">
             <AiFillGithub fontSize={25} style={{marginRight: '10px'}} />
           </a>
-          <a href="mailto:hello@myethmin.com" target="_blank">
+          <a href="mailto:hello@myethmin.com" rel="noreferrer" target="_blank">
             <BiEnvelope fontSize={25} />
           </a>
         </div>
