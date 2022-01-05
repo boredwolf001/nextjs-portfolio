@@ -19,7 +19,7 @@ const About: NextPage = () => {
               <Button variant='primary'>
                 <a
                   className='btn-link'
-                  rel='no-noreferrer'
+                  rel='noreferrer'
                   target='_blank'
                   href='https://github.com/manethyethmin?tab=repositories'
                 >
