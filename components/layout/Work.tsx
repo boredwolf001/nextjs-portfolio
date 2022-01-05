@@ -11,7 +11,7 @@ const About: NextPage = () => {
         <Flex>
           <div className={styles.col1}>
             <SectionHeading heading="My Work" />
-            <p style={{marginTop: '20px', marginBottom: '30px'}}>Looking other peoples' projects can be a great way to learn and teach, share and gain experience. If you like feel free to check my Projects on Github.</p>
+            <p style={{marginTop: '20px', marginBottom: '30px'}}>Looking other peoples&quot; projects can be a great way to learn and teach, share and gain experience. If you like feel free to check my Projects on Github.</p>
             <Button variant="primary">Explore <BiChevronRight fontSize={30} /></Button>
           </div>
           <div className={styles.col2}>
