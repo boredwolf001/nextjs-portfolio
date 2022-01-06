@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
-import styles from '../../styles/Skills.module.scss'
+import type { NextPage } from 'next';
+import styles from '../../styles/Skills.module.scss';
 import { SectionHeading, SectionWrapper } from '../shared';
 
 const Skills: NextPage = () => {
@@ -19,23 +19,23 @@ const Skills: NextPage = () => {
     '/skills/mysql.png',
     '/skills/django.png',
     '/skills/git.png',
-  ]
+  ];
 
   return (
     <div className='container' id='skills'>
-      <SectionWrapper topMargin={70}>
-        <SectionHeading heading="Skills" />
+      <SectionWrapper topMargin={75}>
+        <SectionHeading heading='Skills' />
 
         <div className={styles.grid}>
           {images.map((img, idx) => (
             <div key={idx} className={styles.gridItem}>
-              <img src={img} alt="Skill" />
+              <img src={img} alt='Skill' />
             </div>
           ))}
         </div>
       </SectionWrapper>
     </div>
-  )
+  );
 };
 
-export default Skills
+export default Skills;

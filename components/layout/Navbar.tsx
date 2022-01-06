@@ -2,6 +2,7 @@ import styles from '../../styles/Navbar.module.scss';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const SideMenu = ({
   setShowSideMenu,
@@ -63,7 +64,7 @@ const Navbar = ({ navbarOff }: { navbarOff: Boolean }) => {
               <a href='#skills'>Skills</a>
             </li>
             <li>
-              <a href='#contact' className={styles.navbtn}>
+              <a className={styles.navbtn} href='#contact'>
                 Contact
               </a>
             </li>

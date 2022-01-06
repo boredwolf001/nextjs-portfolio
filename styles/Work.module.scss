@@ -7,10 +7,10 @@
 .col2 {
   max-width: 400px;
 
-  svg {
-    width: 100%;
+  img {
+    width: 175%;
     filter: saturate(1);
-    transform: translateX(200px) translateY(-100px);
+    transform: translateX(-200px) translateY(-100px);
   }
 }
 
@@ -20,12 +20,12 @@
 
 @media (max-width: $responsive-breakpoint) {
   .col2 {
-    svg {
+    img {
       display: none;
     }
   }
 
   .wrapper {
-    height: 300px;
+    height: 400px;
   }
 }

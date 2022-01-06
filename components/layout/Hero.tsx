@@ -2,13 +2,15 @@ import type { NextPage } from 'next';
 import { Flex, Button, SectionWrapper } from '../shared';
 import styles from '../../styles/Hero.module.scss';
 import { BiChevronRight } from 'react-icons/bi';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const Hero: NextPage = () => {
   return (
     <div style={{ width: '1200px' }} className='container'>
       <SectionWrapper topMargin={50}>
         <Flex>
-          <div className={styles.flexCol1}>
+          <div id='col1' className={styles.flexCol1}>
             <h1 className={styles.heroHeading}>
               Modern and <span>Reliable</span> Web Apps
             </h1>
@@ -18,10 +20,13 @@ const Hero: NextPage = () => {
             </p>
 
             <Button variant='primary'>
-              <span>Work</span> <BiChevronRight fontSize={30} />
+              <a href='#work' style={{ color: '#fff' }}>
+                Work
+              </a>{' '}
+              <BiChevronRight fontSize={30} />
             </Button>
           </div>
-          <div className={styles.flexCol2}>
+          <div id='col2' className={styles.flexCol2}>
             <img src='/assets/hero.png' alt='Coding' />
           </div>
         </Flex>
