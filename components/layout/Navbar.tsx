@@ -2,8 +2,8 @@ import styles from '../../styles/Navbar.module.scss';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
-import Link from 'next/link';
 
+// Side menu
 const SideMenu = ({
   setShowSideMenu,
   show,
@@ -40,14 +40,23 @@ const SideMenu = ({
   );
 };
 
-const Navbar = ({ navbarOff }: { navbarOff: Boolean }) => {
+// Mai navbar
+const Navbar = ({
+  navbarOff,
+  darkMode,
+}: {
+  navbarOff: Boolean;
+  darkMode: Boolean;
+}) => {
   const [showSideMenu, setShowSideMenu] = useState(false);
 
   return (
     <>
       <nav className={styles.nav}>
         <div
-          className={`${styles.navContainer} ${navbarOff ? styles.off : ''}`}
+          className={`${styles.navContainer} ${navbarOff ? styles.off : ''} ${
+            darkMode ? styles.dark : ''
+          }`}
         >
           {/* Logo */}
           <h2 className={styles.logo}>Portfolio</h2>

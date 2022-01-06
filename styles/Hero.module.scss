@@ -1,14 +1,12 @@
 @import 'colors';
 
 .heroHeading {
-  color: $dark-gray;
   font-size: 60px;
   line-height: 1;
   margin-bottom: 30px !important;
-  font-weight: normal;
+  font-weight: bolder;
 
   span {
-    font-weight: bold;
     color: $light-green;
   }
 }
@@ -26,7 +24,6 @@
 }
 
 .para {
-  color: $dark-gray;
   margin-bottom: 30px;
   max-width: 500px;
 }

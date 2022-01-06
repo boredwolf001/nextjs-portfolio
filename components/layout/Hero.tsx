@@ -1,11 +1,8 @@
-import type { NextPage } from 'next';
 import { Flex, Button, SectionWrapper } from '../shared';
 import styles from '../../styles/Hero.module.scss';
 import { BiChevronRight } from 'react-icons/bi';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
 
-const Hero: NextPage = () => {
+const Hero = () => {
   return (
     <div style={{ width: '1200px' }} className='container'>
       <SectionWrapper topMargin={50}>

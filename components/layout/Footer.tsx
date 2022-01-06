@@ -4,9 +4,19 @@ import styles from '../../styles/Footer.module.scss';
 import { BiCopyright, BiEnvelope } from 'react-icons/bi';
 import { AiFillGithub } from 'react-icons/ai';
 
-const Footer: NextPage = () => {
+const Footer = ({ darkMode }: { darkMode: Boolean }) => {
   return (
-    <div id='contact' className={styles.footerWrapper}>
+    <div
+      id='contact'
+      style={
+        darkMode
+          ? {
+              backgroundColor: 'rgb(38, 38, 38)',
+            }
+          : {}
+      }
+      className={styles.footerWrapper}
+    >
       <Flex>
         <div className={styles.col1}>
           <h2 className={styles.heading}>
@@ -29,10 +39,14 @@ const Footer: NextPage = () => {
             rel='noreferrer'
             target='_blank'
           >
-            <AiFillGithub fontSize={25} style={{ marginRight: '10px' }} />
+            <AiFillGithub
+              color={darkMode ? '#fff' : '#000'}
+              fontSize={25}
+              style={{ marginRight: '10px' }}
+            />
           </a>
           <a href='mailto:hello@myethmin.com' rel='noreferrer' target='_blank'>
-            <BiEnvelope fontSize={25} />
+            <BiEnvelope color={darkMode ? '#fff' : '#000'} fontSize={25} />
           </a>
         </div>
         <div className={styles.col2}></div>

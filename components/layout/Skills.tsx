@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import styles from '../../styles/Skills.module.scss';
 import { SectionHeading, SectionWrapper } from '../shared';
 
-const Skills: NextPage = () => {
+const Skills = ({ darkMode }: { darkMode: Boolean }) => {
   const images = [
     '/skills/python.png',
     '/skills/html.png',
@@ -28,7 +28,18 @@ const Skills: NextPage = () => {
 
         <div className={styles.grid}>
           {images.map((img, idx) => (
-            <div key={idx} className={styles.gridItem}>
+            <div
+              key={idx}
+              style={
+                darkMode
+                  ? {
+                      backgroundColor: 'rgb(39, 39, 39)',
+                      boxShadow: '2px 2px 4px rgba(36, 36, 36, 0.1)',
+                    }
+                  : {}
+              }
+              className={styles.gridItem}
+            >
               <img src={img} alt='Skill' />
             </div>
           ))}
