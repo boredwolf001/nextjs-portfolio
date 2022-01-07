@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
 import { Flex } from '../shared';
 import styles from '../../styles/Footer.module.scss';
 import { BiCopyright, BiEnvelope } from 'react-icons/bi';
 import { AiFillGithub } from 'react-icons/ai';
 
-const Footer = ({ darkMode }: { darkMode: Boolean }) => {
+const Footer = ({ darkMode }) => {
   return (
     <div
       id='contact'

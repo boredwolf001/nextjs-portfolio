@@ -4,13 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
 
 // Side menu
-const SideMenu = ({
-  setShowSideMenu,
-  show,
-}: {
-  setShowSideMenu: Function;
-  show: Boolean;
-}) => {
+const SideMenu = ({ setShowSideMenu, show }) => {
   return (
     <div className={`${styles.sideMenu} ${show && styles.active}`}>
       <ul className={styles.navlinksHam}>
@@ -41,13 +35,7 @@ const SideMenu = ({
 };
 
 // Mai navbar
-const Navbar = ({
-  navbarOff,
-  darkMode,
-}: {
-  navbarOff: Boolean;
-  darkMode: Boolean;
-}) => {
+const Navbar = ({ navbarOff, darkMode }) => {
   const [showSideMenu, setShowSideMenu] = useState(false);
 
   return (

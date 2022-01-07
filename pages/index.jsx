@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import {
   Hero,
@@ -12,7 +11,7 @@ import DarkModeToggle from 'react-dark-mode-toggle';
 import styles from '../styles/Index.module.scss';
 import useLocalStorageState from '../hooks/useLocalStorageState';
 
-const Home: NextPage = () => {
+const Home = () => {
   const [darkMode, setDarkMode] = useLocalStorageState('dark', true);
   const [navbarOff, setNavbarOff] = useState(false);
 

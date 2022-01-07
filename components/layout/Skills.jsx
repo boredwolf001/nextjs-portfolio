@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
 import styles from '../../styles/Skills.module.scss';
 import { SectionHeading, SectionWrapper } from '../shared';
 
-const Skills = ({ darkMode }: { darkMode: Boolean }) => {
+const Skills = ({ darkMode }) => {
   const images = [
     '/skills/python.png',
     '/skills/html.png',

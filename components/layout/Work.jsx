@@ -1,9 +1,8 @@
-import type { NextPage } from 'next';
 import { Button, Flex, SectionHeading, SectionWrapper } from '../shared';
 import styles from '../../styles/Work.module.scss';
 import { BiChevronRight } from 'react-icons/bi';
 
-const About: NextPage = () => {
+const About = () => {
   return (
     <div className='container' id='work'>
       <div className={styles.wrapper}>

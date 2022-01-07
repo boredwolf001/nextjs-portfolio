@@ -1,8 +1,7 @@
-import type { NextPage } from 'next';
 import { Flex, SectionHeading, SectionWrapper } from '../shared';
 import styles from '../../styles/About.module.scss';
 
-const About: NextPage = () => {
+const About = () => {
   return (
     <div id='about' className='container'>
       <SectionWrapper topMargin={70}>
