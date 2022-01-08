@@ -9,31 +9,36 @@
 
 .button {
   outline: none;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid $orangy;
   padding: 10px 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: inherit !important;
   justify-content: space-around;
-  font-size: inherit;
+  font-size: 16px;
   font-family: inherit;
-  color: #fff;
+  text-transform: uppercase;
+  background: transparent;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .btnPrimary {
-  background-color: $light-blue;
+  border-color: $orangy;
 
   &:hover {
-    background-color: $dark-blue;
+    background-color: $orangy;
   }
 }
 
 .btnSecondary {
-  background-color: $light-green;
+  border-color: $pinky;
 
   &:hover {
-    background-color: $dark-green;
+    background-color: $pinky;
   }
 }
 
@@ -44,7 +49,7 @@
 }
 
 .heading::before {
-  background-color: $dark-green;
+  background-color: $pinky;
   border-radius: 0.25rem;
   content: '';
   display: block;

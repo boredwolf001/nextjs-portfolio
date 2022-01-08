@@ -1,17 +1,17 @@
-import React from 'react';
-import styles from '../../styles/Shared.module.scss'
+import styles from '../../styles/Shared.module.scss';
 
-interface Props {
-  children?: React.ReactNode,
-  variant?: String,
-}
-
-const Button = ({children, variant}: Props) => {
+const Button = ({ children, variant, block, type }) => {
   return (
-    <button className={`${styles.button} ${variant === 'primary' ? styles.btnPrimary : styles.btnSecondary}`}>
+    <button
+      type={type || 'button'}
+      className={`${styles.button} ${
+        variant === 'primary' ? styles.btnPrimary : styles.btnSecondary
+      }`}
+      style={block ? { width: '100%' } : {}}
+    >
       {children}
     </button>
-  )
+  );
 };
 
-export default Button
+export default Button;

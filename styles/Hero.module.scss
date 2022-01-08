@@ -4,10 +4,12 @@
   font-size: 60px;
   line-height: 1;
   margin-bottom: 30px !important;
-  font-weight: bolder;
+  font-weight: normal;
 
   span {
-    color: $light-green;
+    background: linear-gradient(to right, $orangy, $pinky);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

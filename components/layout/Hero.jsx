@@ -1,6 +1,5 @@
 import { Flex, Button, SectionWrapper } from '../shared';
 import styles from '../../styles/Hero.module.scss';
-import { BiChevronRight } from 'react-icons/bi';
 
 const Hero = () => {
   return (
@@ -17,10 +16,9 @@ const Hero = () => {
             </p>
 
             <Button variant='primary'>
-              <a href='#work' style={{ color: '#fff' }}>
-                Work
+              <a href='#work' style={{ color: 'inherit' }}>
+                My Work
               </a>{' '}
-              <BiChevronRight fontSize={30} />
             </Button>
           </div>
           <div id='col2' className={styles.flexCol2}>

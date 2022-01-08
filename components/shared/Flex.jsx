@@ -1,13 +1,12 @@
-import type { NextPage } from 'next'
 import React from 'react';
-import styles from '../../styles/Shared.module.scss'
+import styles from '../../styles/Shared.module.scss';
 
-const Flex= ({children, row}: {row?: Boolean, children: React.ReactNode}) => {
+const Flex = ({ children, row }) => {
   return (
-    <div style={row && {flexDirection: 'column'}} className={styles.flex}>
+    <div style={row && { flexDirection: 'column' }} className={styles.flex}>
       {children}
     </div>
-  )
+  );
 };
 
-export default Flex
+export default Flex;

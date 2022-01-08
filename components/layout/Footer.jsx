@@ -2,15 +2,18 @@ import { Flex } from '../shared';
 import styles from '../../styles/Footer.module.scss';
 import { BiCopyright, BiEnvelope } from 'react-icons/bi';
 import { AiFillGithub } from 'react-icons/ai';
+import { useContext } from 'react';
+import ThemeContext from '../../context/ThemeContext';
 
-const Footer = ({ darkMode }) => {
+const Footer = () => {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
     <div
-      id='contact'
       style={
         darkMode
           ? {
-              backgroundColor: 'rgb(38, 38, 38)',
+              backgroundColor: 'rgb(35, 40, 42)',
             }
           : {}
       }
@@ -18,13 +21,12 @@ const Footer = ({ darkMode }) => {
     >
       <Flex>
         <div className={styles.col1}>
-          <h2 className={styles.heading}>
-            Any Collaborators? Let&apos;s have a chat.
-          </h2>
-          <p>
-            I am always up for cool ideas and projects. If you want have a chat
-            about any of the projects I worked on, or have an interesting
-            project, feel free to get in touch!
+          <p className={styles.repoLink}>
+            If there is something to be fixed, feel free to make a pull request
+            to{' '}
+            <a href='https://github.com/manethyethmin/portfolio'>
+              <AiFillGithub /> Github repo
+            </a>
           </p>
 
           <p className={styles.copyright}>

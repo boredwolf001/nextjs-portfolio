@@ -1,7 +1,8 @@
 import styles from '../../styles/Navbar.module.scss';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import ThemeContext from '../../context/ThemeContext';
 
 // Side menu
 const SideMenu = ({ setShowSideMenu, show }) => {
@@ -35,8 +36,9 @@ const SideMenu = ({ setShowSideMenu, show }) => {
 };
 
 // Mai navbar
-const Navbar = ({ navbarOff, darkMode }) => {
+const Navbar = ({ navbarOff }) => {
   const [showSideMenu, setShowSideMenu] = useState(false);
+  const { darkMode } = useContext(ThemeContext);
 
   return (
     <>

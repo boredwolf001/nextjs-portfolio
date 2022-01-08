@@ -2,17 +2,15 @@ import { useEffect, useState } from 'react';
 import {
   Hero,
   About,
-  Contact,
+  Work,
   Skills,
   Footer,
   Navbar,
+  Contact,
 } from '../components/layout';
-import DarkModeToggle from 'react-dark-mode-toggle';
-import styles from '../styles/Index.module.scss';
-import useLocalStorageState from '../hooks/useLocalStorageState';
+import { ModeToggle } from '../components/shared';
 
 const Home = () => {
-  const [darkMode, setDarkMode] = useLocalStorageState('dark', true);
   const [navbarOff, setNavbarOff] = useState(false);
 
   useEffect(() => {
@@ -28,28 +26,18 @@ const Home = () => {
         setNavbarOff(false);
       }
     });
-
-    // Darkmode stuff
-    darkMode
-      ? document.body.classList.add('dark')
-      : document.body.classList.remove('dark');
-  }, [darkMode]);
+  }, []);
 
   return (
     <>
-      <DarkModeToggle
-        className={styles.darkMode}
-        onChange={setDarkMode}
-        checked={darkMode}
-        size={80}
-      />
-      <Navbar navbarOff={navbarOff} darkMode={darkMode} />
-
+      <Navbar navbarOff={navbarOff} />
+      <ModeToggle className='mode-toggle' />
       <Hero />
       <About />
-      <Skills darkMode={darkMode} />
+      <Skills />
+      <Work />
       <Contact />
-      <Footer darkMode={darkMode} />
+      <Footer />
     </>
   );
 };

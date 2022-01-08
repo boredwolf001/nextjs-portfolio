@@ -21,8 +21,12 @@ const About = () => {
                 href='https://github.com/manethyethmin?tab=repositories'
               >
                 <Button variant='primary'>
-                  Explore
-                  <BiChevronRight fontSize={30} />
+                  <a
+                    href='https://github.com/manethyethmin?tab=repositories'
+                    style={{ color: '#fff' }}
+                  >
+                    Explore
+                  </a>
                 </Button>
               </a>
             </div>

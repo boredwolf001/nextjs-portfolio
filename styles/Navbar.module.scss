@@ -26,7 +26,7 @@
     border-radius: 70px;
     padding: 0 30px;
     transition: width 0.3s cubic-bezier(1, -0.97, 0.54, 1.34),
-      backgroundColor 0.3s ease-in;
+      background-color 0.3s ease-in;
   }
 
   .off {
@@ -34,11 +34,11 @@
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
-  .dark {
-    background-color: rgb(32, 32, 32);
+  .navContainer.dark {
+    background-color: $dark-background;
 
     &.off {
-      background-color: rgb(38, 38, 38);
+      background-color: rgb(35, 40, 42);
       box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     }
 
@@ -88,7 +88,7 @@
   }
 
   .off {
-    width: 100% !important;
+    width: 90% !important;
   }
 
   .navlinks {
@@ -100,6 +100,7 @@
   background: $dark-blue;
   color: #fff !important;
   position: fixed;
+  -webkit-backface-visibility: hidden;
   top: 0;
   right: 0;
   width: 250px;

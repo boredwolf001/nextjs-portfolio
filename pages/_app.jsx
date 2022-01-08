@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { ThemeProvider } from '../context/ThemeContext';
 import '../styles/globals.scss';
 
 function MyApp({ Component, pageProps }) {
@@ -6,9 +7,15 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Maneth | Developer</title>
-        <meta content='width=device-width, initial-scale=1' name='viewport' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0 minimum-scale=1.0, user-scalable=no'
+        />
       </Head>
-      <Component {...pageProps} />
+
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

@@ -1,7 +1,11 @@
+import { useContext } from 'react';
+import ThemeContext from '../../context/ThemeContext';
 import styles from '../../styles/Skills.module.scss';
 import { SectionHeading, SectionWrapper } from '../shared';
 
-const Skills = ({ darkMode }) => {
+const Skills = () => {
+  const { darkMode } = useContext(ThemeContext);
+
   const images = [
     '/skills/python.png',
     '/skills/html.png',
@@ -32,7 +36,7 @@ const Skills = ({ darkMode }) => {
               style={
                 darkMode
                   ? {
-                      backgroundColor: 'rgb(39, 39, 39)',
+                      backgroundColor: 'rgb(35, 40, 42)',
                       boxShadow: '2px 2px 4px rgba(36, 36, 36, 0.1)',
                     }
                   : {}
