@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
           name='viewport'
           content='width=device-width, initial-scale=1.0 minimum-scale=1.0, user-scalable=no'
         />
+        <link href="http://fonts.cdnfonts.com/css/cubano" rel="stylesheet"></link>
       </Head>
 
       <ThemeProvider>
