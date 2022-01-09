@@ -14,7 +14,7 @@ const Skills = () => {
     '/skills/bootstrap.png',
     '/skills/javascript.png',
     '/skills/nodejs.png',
-    '/skills/mongoDB.png',
+    '/skills/mongodb.png',
     '/skills/react.png',
     '/skills/svelte.png',
     '/skills/react-native.png',
