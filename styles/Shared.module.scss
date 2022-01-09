@@ -10,10 +10,12 @@
 .button {
   outline: none;
   border: 2px solid $orangy;
-  padding: 10px 20px;
+  padding: 10px 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  border-radius: 3px;
+  transition: background-color 0.2s linear;
   color: inherit !important;
   justify-content: space-around;
   font-size: 16px;

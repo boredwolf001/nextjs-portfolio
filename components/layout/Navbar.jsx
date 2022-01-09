@@ -54,16 +54,22 @@ const Navbar = ({ navbarOff }) => {
           {/* Links */}
           <ul className={styles.navlinks}>
             <li>
-              <a href='#about'>About Me</a>
+              <a className={styles.navHover} href='#about'>
+                About Me
+              </a>
             </li>
             <li>
-              <a href='#work'>Work</a>
+              <a className={styles.navHover} href='#work'>
+                Work
+              </a>
             </li>
             <li>
-              <a href='#skills'>Skills</a>
+              <a className={styles.navHover} href='#skills'>
+                Skills
+              </a>
             </li>
             <li>
-              <a className={styles.navbtn} href='#contact'>
+              <a className={styles.navHover} href='#contact'>
                 Contact
               </a>
             </li>
