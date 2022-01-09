@@ -97,8 +97,14 @@
   }
 }
 
+@media (max-width: 300px) {
+  .sideMenu {
+    width: 100%;
+  }
+}
+
 .sideMenu {
-  background: $dark-blue;
+  background: linear-gradient(56deg, $orangy, $pinky);
   color: #fff !important;
   position: fixed;
   -webkit-backface-visibility: hidden;
@@ -113,6 +119,10 @@
 
   &.active {
     transform: translateX(0);
+  }
+
+  .navHover::before {
+    background: #ffff;
   }
 
   ul {

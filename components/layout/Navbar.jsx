@@ -19,23 +19,31 @@ const SideMenu = ({ setShowSideMenu, show }) => {
         />
 
         <li>
-          <a href='#about'>About Me</a>
+          <a className={styles.navHover} href='#about'>
+            About Me
+          </a>
         </li>
         <li>
-          <a href='#work'>Work</a>
+          <a className={styles.navHover} href='#work'>
+            Work
+          </a>
         </li>
         <li>
-          <a href='#skills'>Skills</a>
+          <a className={styles.navHover} href='#skills'>
+            Skills
+          </a>
         </li>
         <li>
-          <a href='#contact'>Contact</a>
+          <a className={styles.navHover} href='#contact'>
+            Contact
+          </a>
         </li>
       </ul>
     </div>
   );
 };
 
-// Mai navbar
+// Main navbar
 const Navbar = ({ navbarOff }) => {
   const [showSideMenu, setShowSideMenu] = useState(false);
   const { darkMode } = useContext(ThemeContext);

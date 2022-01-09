@@ -15,11 +15,11 @@ const ModeToggle = ({ className }) => {
     >
       <BsMoon
         style={{ transition: '.3s ease' }}
-        className={!darkMode && styles.hide}
+        className={darkMode && styles.hide}
       />
       <BsSun
         style={{ transition: '.3s ease' }}
-        className={darkMode && styles.hide}
+        className={!darkMode && styles.hide}
       />
     </div>
   );
