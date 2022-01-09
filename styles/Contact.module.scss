@@ -75,11 +75,17 @@
 
 @media (max-width: $responsive-breakpoint) {
   .detailBox {
-    width: 90%;
+    width: 95%;
     margin-left: 0;
   }
 
   .flexCol1 {
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .detailBox {
+    width: 95%;
   }
 }

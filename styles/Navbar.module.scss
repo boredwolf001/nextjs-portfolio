@@ -121,10 +121,6 @@
     transform: translateX(0);
   }
 
-  .navHover::before {
-    background: #ffff;
-  }
-
   ul {
     display: flex;
     align-items: flex-start;
@@ -142,7 +138,12 @@
   }
 
   a {
-    color: #fff;
+    color: #fff !important;
+    position: relative;
+  }
+
+  .navHover::before {
+    background: #fff;
   }
 }
 

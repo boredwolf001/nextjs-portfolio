@@ -32,17 +32,25 @@
 
 @media (max-width: $responsive-breakpoint) {
   .flexCol1 {
-    margin-bottom: 50px;
-    max-width: 450px;
+    margin-bottom: 100px;
+    width: 40%;
   }
 
   .flexCol2 {
+    width: 100%;
+
     img {
-      width: 95%;
+      width: 100%;
     }
   }
 
   .heroHeading {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .flexCol1 {
+    max-width: 30%;
   }
 }

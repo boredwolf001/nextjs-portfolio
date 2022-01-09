@@ -33,7 +33,7 @@ function Contact() {
             </h2>
 
             <p>
-              I am always up for cool ideas and projects. If you want have a
+              I am always up for cool ideas and projects. If you want to have a
               chat about any of the projects I worked on feel free to get in
               touch!
             </p>
