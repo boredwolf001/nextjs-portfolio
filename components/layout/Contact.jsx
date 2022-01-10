@@ -52,7 +52,7 @@ function Contact() {
           <div className={styles.flexCol2}>
             <form
               className={`${styles.form} kwes-form`}
-              action='https://kwesforms.com/api/foreign/forms/Bm1GcgHMY2VZz9fuLAF8'
+              action='https://kwesforms.com/api/foreign/forms/KIzM5ehOYyqeXDUl1QeL'
             >
               <label htmlFor='name'>Name</label>
               <input
