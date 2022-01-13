@@ -1,10 +1,26 @@
-import { useContext } from 'react';
-import ThemeContext from '../../context/ThemeContext';
-import styles from '../../styles/Skills.module.scss';
-import { SectionHeading, SectionWrapper } from '../shared';
+import { useContext } from 'react'
+import ThemeContext from '../../context/ThemeContext'
+import styles from '../../styles/Skills.module.scss'
+import { SectionHeading, SectionWrapper } from '../shared'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const Skills = () => {
-  const { darkMode } = useContext(ThemeContext);
+  const { darkMode } = useContext(ThemeContext)
+
+  const { inView, entry, ref } = useInView()
+  const animationControl = useAnimation()
+
+  if (inView) {
+    animationControl.start({
+      y: 0,
+      opacity: 1,
+      tranistion: {
+        type: 'spring',
+        delay: 0.3,
+      },
+    })
+  }
 
   const images = [
     '/skills/python.png',
@@ -22,14 +38,22 @@ const Skills = () => {
     '/skills/mysql.png',
     '/skills/django.png',
     '/skills/git.png',
-  ];
+  ]
 
   return (
     <div className='container' id='skills'>
       <SectionWrapper topMargin={75}>
         <SectionHeading heading='Skills' />
 
-        <div className={styles.grid}>
+        <motion.div
+          initial={{
+            y: -200,
+            opacity: 0,
+          }}
+          animate={animationControl}
+          ref={ref}
+          className={styles.grid}
+        >
           {images.map((img, idx) => (
             <div
               key={idx}
@@ -46,10 +70,10 @@ const Skills = () => {
               <img src={img} alt='Skill' />
             </div>
           ))}
-        </div>
+        </motion.div>
       </SectionWrapper>
     </div>
-  );
-};
+  )
+}
 
-export default Skills;
+export default Skills

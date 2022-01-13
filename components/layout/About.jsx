@@ -1,7 +1,23 @@
-import { Flex, SectionHeading, SectionWrapper } from '../shared';
-import styles from '../../styles/About.module.scss';
+import { Flex, SectionHeading, SectionWrapper } from '../shared'
+import styles from '../../styles/About.module.scss'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 const About = () => {
+  const { inView, entry, ref } = useInView()
+  const animationControl = useAnimation()
+
+  if (inView) {
+    animationControl.start({
+      y: 0,
+      opacity: 1,
+      tranistion: {
+        type: 'spring',
+        delay: 0.3,
+      },
+    })
+  }
+
   return (
     <div id='about' className='container'>
       <SectionWrapper topMargin={70}>
@@ -10,10 +26,26 @@ const About = () => {
         </div>
 
         <Flex>
-          <div className={styles.flexCol1}>
+          <motion.div
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            animate={animationControl}
+            ref={ref}
+            className={styles.flexCol1}
+          >
             <img src='/assets/profile.jpg' alt='Profile pic' />
-          </div>
-          <div className={styles.flexCol2}>
+          </motion.div>
+          <motion.div
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            animate={animationControl}
+            ref={ref}
+            className={styles.flexCol2}
+          >
             <h2>Hi, I am maneth</h2>
             <p>
               I am maneth, a full stack dev from Sri Lanka. I love experimenting
@@ -25,11 +57,11 @@ const About = () => {
               great experience to my users with design that work, code that is
               beautiful and user interaction that feels natural.
             </p>
-          </div>
+          </motion.div>
         </Flex>
       </SectionWrapper>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

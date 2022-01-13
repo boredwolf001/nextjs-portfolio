@@ -1,11 +1,34 @@
-import { Button, Flex, SectionHeading, SectionWrapper } from '../shared';
-import styles from '../../styles/Work.module.scss';
-import { BiChevronRight } from 'react-icons/bi';
+import { Button, Flex, SectionHeading, SectionWrapper } from '../shared'
+import styles from '../../styles/Work.module.scss'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
-const About = () => {
+const Work = () => {
+  const { inView, entry, ref } = useInView()
+  const animationControl = useAnimation()
+
+  if (inView) {
+    animationControl.start({
+      y: 0,
+      opacity: 1,
+      tranistion: {
+        type: 'spring',
+        delay: 0.3,
+      },
+    })
+  }
+
   return (
     <div className='container' id='work'>
-      <div className={styles.wrapper}>
+      <motion.div
+        initial={{
+          y: -200,
+          opacity: 0,
+        }}
+        animate={animationControl}
+        ref={ref}
+        className={styles.wrapper}
+      >
         <SectionWrapper topMargin={75}>
           <Flex>
             <div className={styles.col1}>
@@ -35,9 +58,9 @@ const About = () => {
             </div>
           </Flex>
         </SectionWrapper>
-      </div>
+      </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default Work

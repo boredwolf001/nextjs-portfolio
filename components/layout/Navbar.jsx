@@ -1,8 +1,8 @@
-import styles from '../../styles/Navbar.module.scss';
-import { HiOutlineMenuAlt1 } from 'react-icons/hi';
-import { AiOutlineClose } from 'react-icons/ai';
-import { useContext, useState } from 'react';
-import ThemeContext from '../../context/ThemeContext';
+import styles from '../../styles/Navbar.module.scss'
+import { HiOutlineMenuAlt1 } from 'react-icons/hi'
+import { AiOutlineClose } from 'react-icons/ai'
+import { useContext, useState } from 'react'
+import ThemeContext from '../../context/ThemeContext'
 
 // Side menu
 const SideMenu = ({ setShowSideMenu, show }) => {
@@ -11,7 +11,7 @@ const SideMenu = ({ setShowSideMenu, show }) => {
       <ul className={styles.navlinksHam}>
         <AiOutlineClose
           onClick={() => {
-            setShowSideMenu(false);
+            setShowSideMenu(false)
           }}
           className={styles.hamMenuClose}
           fontWeight={1000}
@@ -40,21 +40,22 @@ const SideMenu = ({ setShowSideMenu, show }) => {
         </li>
       </ul>
     </div>
-  );
-};
+  )
+}
 
 // Main navbar
 const Navbar = ({ navbarOff }) => {
-  const [showSideMenu, setShowSideMenu] = useState(false);
-  const { darkMode } = useContext(ThemeContext);
+  const [showSideMenu, setShowSideMenu] = useState(false)
+  const { darkMode } = useContext(ThemeContext)
 
   return (
     <>
       <nav className={styles.nav}>
         <div
-          className={`${styles.navContainer} ${navbarOff ? styles.off : ''} ${
-            darkMode ? styles.dark : ''
-          }`}
+          // className={`${styles.navContainer} ${navbarOff ? styles.off : ''} ${
+          //   darkMode ? styles.dark : ''
+          // }`}
+          className={`${styles.navContainer} ${darkMode ? styles.dark : ''}`}
         >
           {/* Logo */}
           <h2 className={styles.logo}>Portfolio</h2>
@@ -95,7 +96,7 @@ const Navbar = ({ navbarOff }) => {
 
       <SideMenu setShowSideMenu={setShowSideMenu} show={showSideMenu} />
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
