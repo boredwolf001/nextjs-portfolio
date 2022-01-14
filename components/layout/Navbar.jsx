@@ -58,7 +58,9 @@ const Navbar = ({ navbarOff }) => {
           className={`${styles.navContainer} ${darkMode ? styles.dark : ''}`}
         >
           {/* Logo */}
-          <h2 className={styles.logo}>Portfolio</h2>
+          <h2 className={styles.logo}>
+            <span>Port</span>folio
+          </h2>
 
           {/* Links */}
           <ul className={styles.navlinks}>

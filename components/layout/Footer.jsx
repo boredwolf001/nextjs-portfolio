@@ -13,16 +13,17 @@ const Footer = () => {
       style={
         darkMode
           ? {
-              backgroundColor: 'rgb(35, 40, 42)',
+              borderTopColor: '$light-gray',
             }
           : {}
       }
       className={styles.footerWrapper}
     >
+    <div className="container">
       <Flex>
         <div className={styles.col1}>
           <p className={styles.repoLink}>
-            If there is something to be fixed, feel free to make a pull request
+            Want to fix something on this site? Feel free to make a pull request
             to{' '}
             <a href='https://github.com/manethyethmin/portfolio'>
               <AiFillGithub /> Github repo
@@ -52,6 +53,7 @@ const Footer = () => {
         </div>
         <div className={styles.col2}></div>
       </Flex>
+    </div>
     </div>
   );
 };
