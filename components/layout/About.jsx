@@ -2,6 +2,7 @@ import { Flex, SectionHeading, SectionWrapper } from '../shared'
 import styles from '../../styles/About.module.scss'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Atropos from 'atropos/react'
 
 const About = () => {
   const { inView, entry, ref } = useInView()
@@ -35,7 +36,9 @@ const About = () => {
             ref={ref}
             className={styles.flexCol1}
           >
-            <img src='/assets/profile.jpg' alt='Profile pic' />
+            <Atropos className='my-atropos'>
+              <img src='/assets/profile.jpg' alt='Profile pic' />
+            </Atropos>
           </motion.div>
           <motion.div
             initial={{

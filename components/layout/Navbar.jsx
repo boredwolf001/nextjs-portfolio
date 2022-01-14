@@ -50,7 +50,7 @@ const Navbar = ({ navbarOff }) => {
 
   return (
     <>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${darkMode ? styles.dark : ''}`}>
         <div
           // className={`${styles.navContainer} ${navbarOff ? styles.off : ''} ${
           //   darkMode ? styles.dark : ''
